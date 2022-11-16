@@ -1,6 +1,6 @@
 name: CI for Main Branch
 
-# Triggers the workflow on push or pull request events but only for the "main" branch
+# Triggers the workflow on push or pull request events but for the "main" and "Live-Deployment" Branches
 on:
   push:
     branches:
