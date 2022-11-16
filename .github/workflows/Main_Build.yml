@@ -50,3 +50,20 @@ jobs:
           MD029: false                  # Ordered list item prefix
           MD033: false                  # Allow inline HTML
           MD036: false                  # Emphasis used instead of a heading
+  
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: 🟥 HTML5 Validator 🟥
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        with:
+          root: tests/
+          blacklist: invalid
+          
+      #- name: 🔷 CSS Validator 🔷 🟡    🟡
+          
+      
